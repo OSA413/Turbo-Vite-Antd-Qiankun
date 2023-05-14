@@ -1,17 +1,9 @@
 {
-  "extends": "tsconfig/vite.json",
+  "extends": "@ocloud/tsconfig/vite.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["components/*"],
-      "@config/*": ["config/*"],
-      "@hooks/*": ["hooks/*"],
-      "@pages/*": ["pages/*"],
-      "@plugin/*": ["plugin/*"],
-      "@provider/*": ["provider/*"],
-      "@ocloud/*": ["packages/*"],
-      "@store/*": ["store/*"],
-      "@svgs/*": ["svgs/*"]
+      "@/*": ["./*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

@@ -1,9 +1,9 @@
 const Home = () => {
   return (
     <div>
-      <div id="react-app"></div>
+      <div id="oms__qms"></div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
