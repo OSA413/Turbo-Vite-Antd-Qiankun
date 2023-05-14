@@ -14,7 +14,9 @@ export const bootstrap = async () => {
   ])
 
   await start({
+    singular: true,
     sandbox: {
+      strictStyleIsolation: true,
       experimentalStyleIsolation: true
     }
   })

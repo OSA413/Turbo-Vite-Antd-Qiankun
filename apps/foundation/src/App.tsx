@@ -7,6 +7,10 @@ import { OConfigProvider, OButton } from '@ocloud/ui'
 import { router } from './router'
 
 const App = () => {
+  const handleClick = () => {
+    console.log(111)
+  }
+
   return (
     <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
       <ThemeProvider theme={{}}>
@@ -21,7 +25,9 @@ const App = () => {
                 </Routes>
               </Suspense>
             </BrowserRouter>
-            <OButton type="dashed">OButton</OButton>
+            <OButton type="dashed" onClick={handleClick}>
+              OButton
+            </OButton>
             <div id="react-app" />
           </div>
         </OConfigProvider>
