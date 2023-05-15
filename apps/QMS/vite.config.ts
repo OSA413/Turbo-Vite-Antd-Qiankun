@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 import qiankun from 'vite-plugin-qiankun'
 
 // useDevMode 开启时与热更新插件冲突,使用变量切换
-const useDevMode: boolean = process.env.DEV_MODULE === 'true'
+const useDevMode: boolean = true
 
 export default ({ mode }: ConfigEnv) => {
   process.env = {

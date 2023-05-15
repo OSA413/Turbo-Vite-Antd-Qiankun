@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "cross-env DEV_MODULE=ture vite",
+    "dev": "cross-env DEV_MODULE=true vite",
     "dev:vite": "cross-env DEV_MODULE=false vite",
     "build": "tsc && cross-env DEV_MODULE=ture vite build",
     "preview": "vite preview"

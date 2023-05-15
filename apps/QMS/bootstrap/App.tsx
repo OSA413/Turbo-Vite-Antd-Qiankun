@@ -9,6 +9,9 @@ const App = () => {
   const devModule: boolean = import.meta.env.REACT_DEV_MODULE
   const cache = createAppCache(devModule)
 
+  const qiankunShadowDom: any = document.querySelector('div[data-name="react-app"]')?.shadowRoot
+  const targetContainer: any = qiankunShadowDom.querySelector('qiankun-head')
+
   const handleClick = () => {
     console.log(222)
   }
@@ -16,7 +19,9 @@ const App = () => {
   return (
     <CacheProvider value={cache}>
       <ThemeProvider theme={{}}>
-        <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
+        <StyleProvider
+          container={targetContainer}
+          transformers={[legacyLogicalPropertiesTransformer]}>
           <OConfigProvider>
             <IGlobalStyled />
             <AppShell>
