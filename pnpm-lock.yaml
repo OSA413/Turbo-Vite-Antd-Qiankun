@@ -10,6 +10,9 @@ importers:
       '@ant-design/icons':
         specifier: ^5.0.1
         version: 5.0.1(react-dom@18.2.0)(react@18.2.0)
+      '@emotion/cache':
+        specifier: ^11.11.0
+        version: 11.11.0
       '@emotion/react':
         specifier: ^11.10.5
         version: 11.10.5(react@18.2.0)
