@@ -25,17 +25,17 @@
     "@reduxjs/toolkit": "^1.9.1",
     "clsx": "^1.2.1",
     "lodash-es": "^4.17.21",
-    "qiankun": "^2.10.3",
+    "qiankun": "^2.10.7",
     "react-feather": "^2.0.10",
     "react-intl": "^6.4.2",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
+    "turbo": "^1.9.4",
     "vite-plugin-qiankun": "^1.0.15"
   },
   "devDependencies": {
     "eslint-config-ocloud": "workspace:*",
-    "prettier": "^2.7.1",
-    "turbo": "^1.9.3"
+    "prettier": "^2.7.1"
   },
   "engines": {
     "node": ">=14.0.0"
