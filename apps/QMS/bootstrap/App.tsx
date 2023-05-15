@@ -1,22 +1,14 @@
 import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/cssinjs'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
 import { OConfigProvider, IGlobalStyled, OButton } from '@ocloud/ui'
-import createCache from '@emotion/cache'
 
 import AppShell from '@/components/AppShell'
-
-const qiankunShadowDom: any = document.querySelector('div[data-name="react-app"]')?.shadowRoot
-const targetContainer: any = qiankunShadowDom.querySelector('qiankun-head')
-
-const cache = createCache({
-  key: 'css',
-  container: targetContainer,
-  prepend: false,
-  speedy: false,
-  stylisPlugins: []
-})
+import { createAppCache } from './cache'
 
 const App = () => {
+  const devModule: boolean = import.meta.env.REACT_DEV_MODULE
+  const cache = createAppCache(devModule)
+
   const handleClick = () => {
     console.log(222)
   }
@@ -28,7 +20,7 @@ const App = () => {
           <OConfigProvider>
             <IGlobalStyled />
             <AppShell>
-              <p>Micro Sub App</p>
+              <p>Qiankun Sub React App</p>
               <OButton type="primary" onClick={handleClick}>
                 Add
               </OButton>
