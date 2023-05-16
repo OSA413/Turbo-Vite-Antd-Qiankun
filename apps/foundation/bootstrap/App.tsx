@@ -4,7 +4,7 @@ import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/c
 import { ThemeProvider } from '@emotion/react'
 import { OConfigProvider, OButton } from '@ocloud/ui'
 
-import { router } from './router'
+import { router } from '@/router'
 
 const App = () => {
   const handleClick = () => {
