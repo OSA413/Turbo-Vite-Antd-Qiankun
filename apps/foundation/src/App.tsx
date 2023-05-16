@@ -15,21 +15,18 @@ const App = () => {
     <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
       <ThemeProvider theme={{}}>
         <OConfigProvider>
-          <div className="App">
-            <BrowserRouter>
-              <Suspense>
-                <Routes>
-                  {router.map(({ path, component: Component }) => {
-                    return <Route key={path} path={path} element={<Component />} />
-                  })}
-                </Routes>
-              </Suspense>
-            </BrowserRouter>
-            <OButton type="dashed" onClick={handleClick}>
-              OButton
-            </OButton>
-            <div id="react-app" />
-          </div>
+          <OButton type="dashed" onClick={handleClick}>
+            OButton
+          </OButton>
+          <BrowserRouter>
+            <Suspense>
+              <Routes>
+                {router.map(({ path, component: Component }) => {
+                  return <Route key={path} path={path} element={<Component />} />
+                })}
+              </Routes>
+            </Suspense>
+          </BrowserRouter>
         </OConfigProvider>
       </ThemeProvider>
     </StyleProvider>

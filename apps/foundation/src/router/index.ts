@@ -1,9 +1,9 @@
-import { lazy } from "react";
+import { lazy } from 'react'
 
 export const router = [
   {
-    path: "/micro-react",
-    component: lazy(() => import("../pages/index")),
-    children: [],
-  },
-];
+    path: '/',
+    component: lazy(() => import('../pages/index')),
+    children: []
+  }
+]

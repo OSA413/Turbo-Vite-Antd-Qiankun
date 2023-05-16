@@ -9,7 +9,7 @@ const App = () => {
   const devModule: boolean = import.meta.env.REACT_DEV_MODULE
   const cache = createAppCache(devModule)
 
-  const qiankunShadowDom: any = document.querySelector('div[data-name="react-app"]')?.shadowRoot
+  const qiankunShadowDom: any = document.querySelector('div[data-name="oms__qms"]')?.shadowRoot
   const targetContainer: any = qiankunShadowDom.querySelector('qiankun-head')
 
   const handleClick = () => {

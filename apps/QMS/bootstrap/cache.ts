@@ -10,7 +10,7 @@ export const createAppCache = (devModule: boolean) => {
   }
 
   if (devModule) {
-    const qiankunShadowDom: any = document.querySelector('div[data-name="react-app"]')?.shadowRoot
+    const qiankunShadowDom: any = document.querySelector('div[data-name="oms__qms"]')?.shadowRoot
     const targetContainer: Node = qiankunShadowDom.querySelector('qiankun-head')
     cacheOptions.container = targetContainer
   }

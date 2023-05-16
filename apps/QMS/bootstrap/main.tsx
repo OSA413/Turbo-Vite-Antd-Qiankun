@@ -4,6 +4,16 @@ import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helpe
 
 import App from './App'
 
+const render = (container?: string) => {
+  // 如果是在主应用的环境下就挂载主应用的节点，否则挂载到本地
+  const appDom: any = container ? container : document.getElementById('root')
+  createRoot(appDom).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  )
+}
+
 const initQianKun = () => {
   renderWithQiankun({
     // 当前应用在主应用中的生命周期
@@ -21,16 +31,6 @@ const initQianKun = () => {
     update() {},
     unmount() {}
   })
-}
-
-const render = (container?: string) => {
-  // 如果是在主应用的环境下就挂载主应用的节点，否则挂载到本地
-  const appDom: any = container ? container : document.getElementById('root')
-  createRoot(appDom).render(
-    <StrictMode>
-      <App />
-    </StrictMode>
-  )
 }
 
 // 判断当前应用是否在主应用中
