@@ -16,7 +16,6 @@ const render = (container?: string) => {
 
 const initQianKun = () => {
   renderWithQiankun({
-    // 当前应用在主应用中的生命周期
     // 文档 https://qiankun.umijs.org/zh/guide/getting-started#
     mount(props: any) {
       console.log(props)

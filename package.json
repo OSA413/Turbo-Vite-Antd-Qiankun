@@ -22,7 +22,7 @@
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@ocloud/ui": "^0.1.6",
+    "@ocloud/ui": "^0.1.8",
     "@reduxjs/toolkit": "^1.9.1",
     "clsx": "^1.2.1",
     "lodash-es": "^4.17.21",
