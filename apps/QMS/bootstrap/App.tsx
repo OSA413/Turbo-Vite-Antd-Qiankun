@@ -3,25 +3,22 @@ import { CacheProvider, ThemeProvider } from '@emotion/react'
 import { OConfigProvider, IGlobalStyled, OButton } from '@ocloud/ui'
 
 import AppShell from '@/components/AppShell'
+import { createContainer } from './container'
 import { createAppCache } from './cache'
 
 const App = () => {
   const devModule: boolean = import.meta.env.REACT_DEV_MODULE
-  const cache = createAppCache(devModule)
-
-  // const qiankunShadowDom: any = document.querySelector('div[data-name="oms__qms"]')?.shadowRoot
-  // const targetContainer: any = qiankunShadowDom.querySelector('qiankun-head')
+  const container = createContainer(devModule)
+  const cache = createAppCache(devModule, container)
 
   const handleClick = () => {
-    console.log(222)
+    console.log(3333)
   }
 
   return (
     <CacheProvider value={cache}>
       <ThemeProvider theme={{}}>
-        <StyleProvider
-          // container={targetContainer}
-          transformers={[legacyLogicalPropertiesTransformer]}>
+        <StyleProvider container={container} transformers={[legacyLogicalPropertiesTransformer]}>
           <OConfigProvider>
             <IGlobalStyled />
             <AppShell>

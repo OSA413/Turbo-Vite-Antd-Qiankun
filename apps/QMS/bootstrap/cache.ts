@@ -1,7 +1,7 @@
 import createCache from '@emotion/cache'
 import type { EmotionCache, Options } from '@emotion/cache'
 
-export const createAppCache = (devModule: boolean) => {
+export const createAppCache = (devModule: boolean, container: any) => {
   const cacheOptions: Options = {
     key: 'css',
     prepend: false,
@@ -9,12 +9,7 @@ export const createAppCache = (devModule: boolean) => {
     stylisPlugins: []
   }
 
-  if (devModule) {
-    const qiankunShadowDom: any = document.querySelector('div[data-name="oms__qms"]')?.shadowRoot
-    const targetContainer: Node = qiankunShadowDom.querySelector('qiankun-head')
-    cacheOptions.container = targetContainer
-  }
-
+  if (devModule) cacheOptions.container = container
   const cache: EmotionCache = createCache(cacheOptions)
 
   return cache

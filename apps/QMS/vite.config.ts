@@ -4,14 +4,16 @@ import react from '@vitejs/plugin-react-swc'
 import qiankun from 'vite-plugin-qiankun'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
-// useDevMode 开启时与热更新插件冲突,使用变量切换
-const useDevMode: boolean = process.env.DEV_MODULE === 'true'
-
 export default ({ mode }: ConfigEnv) => {
   process.env = {
     ...process.env,
     ...loadEnv(mode, process.cwd(), 'REACT_')
   }
+
+  // 微应用名字，与主应用注册的微应用名字保持一致
+  const appName: string = process.env.REACT_SUB_APP_NAME || ''
+  // useDevMode 开启时与热更新插件冲突,使用变量切换
+  const useDevMode: boolean = process.env.DEV_MODULE === 'true'
 
   return defineConfig({
     base: './',
@@ -22,13 +24,12 @@ export default ({ mode }: ConfigEnv) => {
       createHtmlPlugin({
         minify: false,
         entry: path.resolve(__dirname, 'bootstrap/main.tsx'),
-        // template: 'index.html',
         inject: {
           // data: {
           //   cdnPath: process.env.REACT_CDN_PATH,
           //   appPath: process.env.REACT_APP_URL,
           //   apiPath: process.env.REACT_APP_API_URL
-          // }
+          // },
           tags: [
             {
               injectTo: 'body-prepend',
@@ -41,8 +42,7 @@ export default ({ mode }: ConfigEnv) => {
         }
       }),
       ...(useDevMode ? [] : [react()]),
-      // 微应用名字，与主应用注册的微应用名字保持一致
-      qiankun('oms__qms', {
+      qiankun(appName, {
         useDevMode: true
       })
     ],
