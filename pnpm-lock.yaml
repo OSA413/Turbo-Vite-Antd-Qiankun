@@ -20,8 +20,8 @@ importers:
         specifier: ^11.10.5
         version: 11.10.5(@emotion/react@11.10.5)(react@18.2.0)
       '@ocloud/ui':
-        specifier: ^0.1.8
-        version: 0.1.8(@ant-design/icons@5.0.1)(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(@wangeditor/core@1.1.19)(react-dom@18.2.0)(react-intl@6.4.2)(react-redux@8.0.5)
+        specifier: ^0.1.10
+        version: 0.1.10(@ant-design/icons@5.0.1)(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(@wangeditor/core@1.1.19)(react-dom@18.2.0)(react-intl@6.4.2)(react-redux@8.0.5)(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^1.9.1
         version: 1.9.1(react-redux@8.0.5)(react@18.2.0)
@@ -782,12 +782,13 @@ packages:
       fastq: 1.15.0
     dev: false
 
-  /@ocloud/ui@0.1.8(@ant-design/icons@5.0.1)(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(@wangeditor/core@1.1.19)(react-dom@18.2.0)(react-intl@6.4.2)(react-redux@8.0.5):
-    resolution: {integrity: sha512-akQS+208FbjMPFu6cffGndrp0pSJdhKY6I0qoaFlTdUquAOFZjqUgARkwXGajhlDvl98XgPJTAvJKL6iNaP8VA==}
+  /@ocloud/ui@0.1.10(@ant-design/icons@5.0.1)(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(@wangeditor/core@1.1.19)(react-dom@18.2.0)(react-intl@6.4.2)(react-redux@8.0.5)(react@18.2.0):
+    resolution: {integrity: sha512-0JCNYxgEi3FM400VVrbc0tE7B9Bx3kdTf+V8YY2L3EmOmypdorfC6fvWfJ4EbZ6kd5VM5zwKTL3C0TlK9yJ2Yg==}
     peerDependencies:
       '@ant-design/icons': ^5.0.1
       '@emotion/react': ^11.10.5
       '@emotion/styled': ^11.10.5
+      react: ^18.2.0
       react-intl: ^6.2.5
       react-redux: ^8.0.5
     dependencies:
@@ -812,8 +813,8 @@ packages:
       - react-dom
     dev: false
 
-  /@rc-component/color-picker@1.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-8u7S744okf5CY+LAR4v3j8xgK0x39hiqoiIhoSkYNqGF4wysv4N99/t30od9wQhHzZe7rXBXmiQlkP34pTSxhg==}
+  /@rc-component/color-picker@1.0.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-pf/4AJXzL6SmDwvrqYjJIdSIn5I2WQ5iOD6reM2BA4hiAKYbxxGYUiq5y6pgEH2jMDWLEjInzMYwaUo3186sCQ==}
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -1184,7 +1185,7 @@ packages:
       mime-match: 1.0.2
       namespace-emitter: 2.0.1
       nanoid: 3.3.6
-      preact: 10.14.0
+      preact: 10.14.1
     dev: false
 
   /@uppy/store-default@2.1.1:
@@ -1475,7 +1476,7 @@ packages:
       '@ant-design/react-slick': 1.0.1(react@18.2.0)
       '@babel/runtime': 7.21.5
       '@ctrl/tinycolor': 3.6.0
-      '@rc-component/color-picker': 1.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@rc-component/color-picker': 1.0.2(react-dom@18.2.0)(react@18.2.0)
       '@rc-component/mutate-observer': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@rc-component/tour': 1.8.0(react-dom@18.2.0)(react@18.2.0)
       '@rc-component/trigger': 1.13.0(react-dom@18.2.0)(react@18.2.0)
@@ -3397,8 +3398,8 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /preact@10.14.0:
-    resolution: {integrity: sha512-4oh2sf208mKAdL5AQtzXxE387iSGNWMX/YjwMjH6m/XROILKAmx5Pbs2FsXrW7ixoVGGjpfYSBB833vOwYxNxw==}
+  /preact@10.14.1:
+    resolution: {integrity: sha512-4XDSnUisk3YFBb3p9WeKeH1mKoxdFUsaXcvxs9wlpYR1wax/TWJVqhwmIWbByX0h7jMEJH6Zc5J6jqc58FKaNQ==}
     dev: false
 
   /prelude-ls@1.2.1:
