@@ -1,6 +1,6 @@
 import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/cssinjs'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
-import { OConfigProvider, IGlobalStyled, OButton } from '@ocloud/ui'
+import { OConfigProvider, OApp, IGlobalStyled } from '@ocloud/ui'
 
 import AppShell from '@/components/AppShell'
 import { createContainer } from './container'
@@ -11,22 +11,17 @@ const App = () => {
   const container = createContainer(devModule)
   const cache = createAppCache(devModule, container)
 
-  const handleClick = () => {
-    console.log(3333)
-  }
-
   return (
     <CacheProvider value={cache}>
       <ThemeProvider theme={{}}>
         <StyleProvider container={container} transformers={[legacyLogicalPropertiesTransformer]}>
+          <IGlobalStyled />
           <OConfigProvider>
-            <IGlobalStyled />
-            <AppShell>
-              <p>Qiankun Sub React App</p>
-              <OButton type="primary" onClick={handleClick}>
-                Add
-              </OButton>
-            </AppShell>
+            <OApp>
+              <AppShell>
+                <p>Qiankun Sub React App</p>
+              </AppShell>
+            </OApp>
           </OConfigProvider>
         </StyleProvider>
       </ThemeProvider>
