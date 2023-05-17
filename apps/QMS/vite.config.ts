@@ -11,13 +11,14 @@ export default ({ mode }: ConfigEnv) => {
   }
 
   // 微应用名字，与主应用注册的微应用名字保持一致
-  const appName: string = process.env.REACT_SUB_APP_NAME || ''
+  const appName: string = process.env.REACT_APP_NAME || ''
   // useDevMode 开启时与热更新插件冲突,使用变量切换
   const useDevMode: boolean = process.env.DEV_MODULE === 'true'
 
   return defineConfig({
     base: './',
     define: {
+      'import.meta.env.REACT_APP_NAME': JSON.stringify(appName),
       'import.meta.env.REACT_DEV_MODULE': JSON.stringify(useDevMode)
     },
     plugins: [
