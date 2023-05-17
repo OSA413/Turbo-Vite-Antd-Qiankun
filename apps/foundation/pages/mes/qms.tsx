@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { start } from 'qiankun'
 
-const Home = () => {
+const QMS = () => {
   useEffect(() => {
     if (!window.qiankunStarted) {
       window.qiankunStarted = true
@@ -13,14 +13,18 @@ const Home = () => {
         }
       })
     }
+
+    return () => {
+      window.qiankunStarted = false
+    }
   }, [])
 
   return (
     <div>
       <h1>Qiankun Main App</h1>
-      <div id="oms__qms"></div>
+      <div id="oms__qms" />
     </div>
   )
 }
 
-export default Home
+export default QMS

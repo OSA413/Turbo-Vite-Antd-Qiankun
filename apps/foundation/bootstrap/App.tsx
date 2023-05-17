@@ -4,7 +4,8 @@ import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/c
 import { ThemeProvider } from '@emotion/react'
 import { OConfigProvider, IGlobalStyled } from '@ocloud/ui'
 
-import { router } from '@/router'
+import AppShell from '@/components/AppShell'
+import { router } from '@/routes'
 
 const App = () => {
   return (
@@ -14,11 +15,13 @@ const App = () => {
           <IGlobalStyled />
           <BrowserRouter>
             <Suspense>
-              <Routes>
-                {router.map(({ path, component: Component }) => {
-                  return <Route key={path} path={path} element={<Component />} />
-                })}
-              </Routes>
+              <AppShell>
+                <Routes>
+                  {router.map(({ path, component: Component }) => {
+                    return <Route key={path} path={path} element={<Component />} />
+                  })}
+                </Routes>
+              </AppShell>
             </Suspense>
           </BrowserRouter>
         </OConfigProvider>
