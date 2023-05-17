@@ -11,12 +11,16 @@ const App = () => {
   const container = createContainer(devModule)
   const cache = createAppCache(devModule, container)
 
+  const getPopupContainer = () => {
+    return devModule ? container : document.body
+  }
+
   return (
     <CacheProvider value={cache}>
       <ThemeProvider theme={{}}>
         <StyleProvider container={container} transformers={[legacyLogicalPropertiesTransformer]}>
           <IGlobalStyled />
-          <OConfigProvider>
+          <OConfigProvider getPopupContainer={getPopupContainer}>
             <OApp>
               <AppShell>
                 <p>Qiankun Sub React App</p>
