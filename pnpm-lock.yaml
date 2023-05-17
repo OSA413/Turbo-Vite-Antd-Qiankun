@@ -32,8 +32,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       qiankun:
-        specifier: ^2.10.7
-        version: 2.10.7
+        specifier: ^2.10.8
+        version: 2.10.8
       react-feather:
         specifier: ^2.0.10
         version: 2.0.10(react@18.2.0)
@@ -3433,8 +3433,8 @@ packages:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
 
-  /qiankun@2.10.7:
-    resolution: {integrity: sha512-SoaLhVS8Chpt1LIF0VdCnlkUZDYORyVWYIFrMPmXnyMwgO/80t+qiKs4h/VUhln9HbbXA/x11CJJDpEDuDuJIw==}
+  /qiankun@2.10.8:
+    resolution: {integrity: sha512-5w6QeM1INFavJdIWfSoDIVv2InV8MEojauvY5tY9Biu8hhE5Rml/HM2t/Y60kZcuOpgy/HGX+tcc6NkQuzDoCg==}
     dependencies:
       '@babel/runtime': 7.21.5
       import-html-entry: 1.14.6
