@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { StyleProvider, legacyLogicalPropertiesTransformer, createCache } from '@ant-design/cssinjs'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
+import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 import { OConfigProvider, OApp, IGlobalStyled } from '@ocloud/ui'
 
 import AppShell from '@/components/AppShell'
@@ -30,7 +31,7 @@ const App = () => {
           <IGlobalStyled />
           <OConfigProvider prefixCls="qms" getPopupContainer={getPopupContainer}>
             <OApp>
-              <BrowserRouter basename="/MES/QMS">
+              <BrowserRouter basename={qiankunWindow.__POWERED_BY_QIANKUN__ ? '/MES/QMS' : '/'}>
                 <Suspense>
                   <AppShell>
                     <Routes>

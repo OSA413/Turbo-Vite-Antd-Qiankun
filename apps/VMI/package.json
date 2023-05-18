@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env DEV_MODULE=true vite",
     "dev:vite": "cross-env DEV_MODULE=false vite",
-    "build": "tsc && cross-env DEV_MODULE=ture vite build",
+    "build": "tsc && cross-env DEV_MODULE=true vite build",
     "preview": "vite preview"
   },
   "dependencies": {

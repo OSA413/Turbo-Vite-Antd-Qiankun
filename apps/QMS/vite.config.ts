@@ -16,7 +16,7 @@ export default ({ mode }: ConfigEnv) => {
   const useDevMode: boolean = process.env.DEV_MODULE === 'true'
 
   return defineConfig({
-    base: './',
+    base: '/MES/QMS',
     define: {
       'import.meta.env.REACT_APP_NAME': JSON.stringify(appName),
       'import.meta.env.REACT_DEV_MODULE': JSON.stringify(useDevMode)
