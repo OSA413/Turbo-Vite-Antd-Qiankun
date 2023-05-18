@@ -12,16 +12,6 @@ export const router = [
     children: []
   },
   {
-    path: '/MES/VMI/*',
-    component: lazy(() => import('@/pages/mes/vmi')),
-    children: []
-  },
-  {
-    path: '/MES/QMS/*',
-    component: lazy(() => import('@/pages/mes/qms')),
-    children: []
-  },
-  {
     path: '*',
     component: lazy(() => import('@/pages/not-found')),
     children: []

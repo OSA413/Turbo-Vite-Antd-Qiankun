@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { start } from 'qiankun'
 
-const QMS = () => {
+const VMI = () => {
   useEffect(() => {
     if (!window.qiankunStarted) {
       window.qiankunStarted = true
@@ -21,10 +21,10 @@ const QMS = () => {
 
   return (
     <div>
-      <h1>Qiankun QMS Main App</h1>
-      <div id="oms__qms" />
+      <h1>Qiankun Vmi Main App</h1>
+      <div id="oms__vmi" />
     </div>
   )
 }
 
-export default QMS
+export default VMI

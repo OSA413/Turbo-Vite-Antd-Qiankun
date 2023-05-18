@@ -6,7 +6,7 @@ import App from './App'
 
 const render = (container?: string) => {
   // 如果是在主应用的环境下就挂载主应用的节点，否则挂载到本地
-  const appDom: any = container ? container : document.getElementById('qms')
+  const appDom: any = container ? container : document.getElementById('vmi')
   createRoot(appDom).render(
     <StrictMode>
       <App />

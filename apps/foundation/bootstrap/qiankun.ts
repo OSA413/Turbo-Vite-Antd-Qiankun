@@ -8,7 +8,16 @@ export const bootstrap = async () => {
       container: '#oms__qms', // 微应用挂载的节点
       activeRule: '/MES/QMS', // 当访问路由为 /MES/QMS/ 时加载微应用
       props: {
-        msg: '我是来自主应用的值-react' // 主应用向微应用传递参数
+        msg: '我是来自主应用的值-qms' // 主应用向微应用传递参数
+      }
+    },
+    {
+      name: 'oms__vmi',
+      entry: 'http://localhost:3002',
+      container: '#oms__vmi',
+      activeRule: '/MES/VMI',
+      props: {
+        msg: '我是来自主应用的值-vmi'
       }
     }
   ])

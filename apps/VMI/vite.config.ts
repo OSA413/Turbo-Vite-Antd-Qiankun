@@ -36,7 +36,7 @@ export default ({ mode }: ConfigEnv) => {
               injectTo: 'body-prepend',
               tag: 'div',
               attrs: {
-                id: 'qms'
+                id: 'vmi'
               }
             }
           ]
@@ -57,7 +57,7 @@ export default ({ mode }: ConfigEnv) => {
       headers: {
         'Access-Control-Allow-Origin': '*'
       },
-      port: 3003
+      port: 3002
     }
   })
 }
