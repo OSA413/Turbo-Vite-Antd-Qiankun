@@ -1,8 +1,12 @@
+import { Suspense } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { StyleProvider, legacyLogicalPropertiesTransformer, createCache } from '@ant-design/cssinjs'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
 import { OConfigProvider, OApp, IGlobalStyled } from '@ocloud/ui'
 
 import AppShell from '@/components/AppShell'
+import { router } from '@/routes'
+
 import { createContainer } from './container'
 import { createAppCache } from './cache'
 
@@ -26,9 +30,17 @@ const App = () => {
           <IGlobalStyled />
           <OConfigProvider prefixCls="qms" getPopupContainer={getPopupContainer}>
             <OApp>
-              <AppShell>
-                <p>Qiankun Sub React App</p>
-              </AppShell>
+              <BrowserRouter basename="/MES/QMS">
+                <Suspense>
+                  <AppShell>
+                    <Routes>
+                      {router.map(({ path, component: Component }) => {
+                        return <Route key={path} path={path} element={<Component />} />
+                      })}
+                    </Routes>
+                  </AppShell>
+                </Suspense>
+              </BrowserRouter>
             </OApp>
           </OConfigProvider>
         </StyleProvider>

@@ -1,26 +1,16 @@
 import { FC, PropsWithChildren } from 'react'
-import { OApp, OButton } from '@ocloud/ui'
+import { Link } from 'react-router-dom'
 
 import { StyledAppShell } from './styled'
 
 const AppShell: FC<PropsWithChildren> = ({ children }) => {
-  const { notification } = OApp.useApp()
-
-  const handleClick = () => {
-    notification.info({
-      message: `Notification topLeft`,
-      description: 'Hello, Ant Design!!',
-      placement: 'topLeft'
-    })
-  }
-
   return (
-    <StyledAppShell>
-      {children}{' '}
-      <OButton type="primary" onClick={handleClick}>
-        Add
-      </OButton>
-    </StyledAppShell>
+    <>
+      <Link to="/">Home</Link>
+      <br />
+      <Link to="/login">Login</Link>
+      <StyledAppShell>{children}</StyledAppShell>
+    </>
   )
 }
 
