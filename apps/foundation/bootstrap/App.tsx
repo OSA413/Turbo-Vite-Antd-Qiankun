@@ -22,6 +22,8 @@ const App = () => {
                   })}
                 </Routes>
               </AppShell>
+              <div id="oms__vmi" />
+              <div id="oms__qms" />
             </Suspense>
           </BrowserRouter>
         </OConfigProvider>

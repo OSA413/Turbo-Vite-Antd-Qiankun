@@ -16,6 +16,9 @@ const LoginPage = () => {
         <OForm.Item name="password" rules={[{ required: true }]}>
           <OInput.Password placeholder="请输入用密码" />
         </OForm.Item>
+        <OForm.Item name="confirm" rules={[{ required: true }]}>
+          <OInput.Password placeholder="请输入用密码" />
+        </OForm.Item>
         <OForm.Item>
           <OButton type="primary" htmlType="submit">
             登录
