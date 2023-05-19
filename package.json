@@ -30,7 +30,7 @@
     "react-feather": "^2.0.10",
     "react-intl": "^6.4.2",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.9.0",
+    "rollup-plugin-external-globals": "^0.8.0",
     "turbo": "^1.9.4",
     "vite-plugin-cdn-import": "^0.3.5",
     "vite-plugin-html": "^3.2.0",
@@ -38,7 +38,8 @@
   },
   "devDependencies": {
     "eslint-config-ocloud": "workspace:*",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "rollup-plugin-visualizer": "^5.9.0"
   },
   "engines": {
     "node": ">=14.0.0"
