@@ -10,7 +10,7 @@ export default ({ mode }: ConfigEnv) => {
   }
 
   return defineConfig({
-    base: './',
+    base: '/',
     plugins: [
       react(),
       importCDN({

@@ -22,7 +22,7 @@ export default ({ mode }: ConfigEnv) => {
   const useVisualizer: boolean = process.env.REACT_APP_VISUALIZER === '1'
 
   return defineConfig({
-    base: useDevMode ? '/MES/QMS' : './',
+    base: useDevMode ? '/oms/qms' : './',
     define: {
       'import.meta.env.REACT_APP_NAME': JSON.stringify(appName),
       'import.meta.env.REACT_DEV_MODULE': JSON.stringify(useDevMode)
