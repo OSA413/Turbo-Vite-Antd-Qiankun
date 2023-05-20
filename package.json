@@ -7,8 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "turbo run build:qiankun",
+    "dev": "turbo run dev:qiankun",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "pnpm clean:node-modules & pnpm clean:next-cache & pnpm clean:turbo-cache",

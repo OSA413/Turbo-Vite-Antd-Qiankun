@@ -74,6 +74,9 @@ importers:
       '@ocloud/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
+      '@ocloud/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       '@vitejs/plugin-react-swc':
         specifier: ^3.0.0
         version: 3.0.0(vite@4.2.0)
@@ -117,6 +120,9 @@ importers:
       '@ocloud/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
+      '@ocloud/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       '@vitejs/plugin-react-swc':
         specifier: ^3.0.0
         version: 3.0.0(vite@4.2.0)
@@ -208,7 +214,7 @@ importers:
         version: 8.3.0(eslint@7.32.0)
       eslint-config-turbo:
         specifier: latest
-        version: 1.9.7(eslint@7.32.0)
+        version: 1.9.8(eslint@7.32.0)
       eslint-plugin-react:
         specifier: 7.31.8
         version: 7.31.8(eslint@7.32.0)
@@ -218,6 +224,12 @@ importers:
         version: 4.9.3
 
   packages/tsconfig: {}
+
+  packages/utils:
+    devDependencies:
+      typescript:
+        specifier: ^4.5.2
+        version: 4.9.3
 
 packages:
 
@@ -2315,13 +2327,13 @@ packages:
       eslint: 7.32.0
     dev: false
 
-  /eslint-config-turbo@1.9.7(eslint@7.32.0):
-    resolution: {integrity: sha512-dTIKlw/nPeI2qwAL/1T8CTlV4HGh44G2SdLWi0D1b7gJ2dvdAxfsY1z8vKqFa6cyAZn6m2AxuH+WKiy2OudJQA==}
+  /eslint-config-turbo@1.9.8(eslint@7.32.0):
+    resolution: {integrity: sha512-EaZ3EbWXo7bcnwRKZsV+ckcF5Cjdri9wRBXZd5j49E7mJ3EEPvGw70h77kWeeunu+jM3mxxfy8olmo1Udr7gvQ==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 7.32.0
-      eslint-plugin-turbo: 1.9.7(eslint@7.32.0)
+      eslint-plugin-turbo: 1.9.8(eslint@7.32.0)
     dev: false
 
   /eslint-import-resolver-node@0.3.7:
@@ -2472,8 +2484,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /eslint-plugin-turbo@1.9.7(eslint@7.32.0):
-    resolution: {integrity: sha512-SuHqbfsKyfvYvyNTSt1rxV8pmeIs6g3u9OPd2uIgbf3o/CzMcRHbMPXhGRWLlBjtjjhCtHmOk4bmc+DMycnojA==}
+  /eslint-plugin-turbo@1.9.8(eslint@7.32.0):
+    resolution: {integrity: sha512-Alvv3zCkILFfwEJ2aiuUjzYFqZ12qX+2F14ahNOhC9BDwgGZkEh1w19TB2gOPMLeNx2+iBVAU9L+1FTBSOOAJA==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:

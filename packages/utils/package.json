@@ -1,0 +1,12 @@
+{
+  "name": "@ocloud/utils",
+  "author": "",
+  "copyright": "All Rights Reserved",
+  "version": "0.0.1",
+  "main": "./index.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "sideEffects": false
+}

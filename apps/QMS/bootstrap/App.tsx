@@ -5,15 +5,15 @@ import { CacheProvider, ThemeProvider } from '@emotion/react'
 import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 import { OConfigProvider, OApp, IGlobalStyled } from '@ocloud/ui'
 
+import { createAppCache, createContainer } from '@ocloud/utils'
+
 import AppShell from '@/components/AppShell'
 import { router } from '@/routes'
 
-import { createContainer } from './container'
-import { createAppCache } from './cache'
-
 const App = () => {
   const devModule: boolean = import.meta.env.REACT_DEV_MODULE
-  const container = createContainer(devModule)
+  const appName: string = import.meta.env.REACT_APP_NAME
+  const container = createContainer(devModule, appName)
   const cache = createAppCache(devModule, container)
   const sslCache = createCache()
 
