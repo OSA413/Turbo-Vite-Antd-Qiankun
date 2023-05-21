@@ -13,6 +13,14 @@ export const StyledLoginPage = styled.div`
 
   form {
     width: 400px;
-    margin: 40px 0;
+    padding: 30px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(219, 219, 219, 0.71) 0px 0px 98px 11px;
+    border-radius: 8px;
   }
+`
+
+export const StyledTitle = styled.h1`
+  margin-bottom: 20px;
+  text-align: center;
 `

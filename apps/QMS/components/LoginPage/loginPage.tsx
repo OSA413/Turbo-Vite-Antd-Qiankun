@@ -1,26 +1,29 @@
-import { OButton, OForm, OInput } from '@ocloud/ui'
+import { OButton, OForm, OInput, OSpin } from '@ocloud/ui'
 
-import { StyledLoginPage } from './styled'
+import { useLoginPage } from '@/hooks/LoginPage'
+
+import { StyledLoginPage, StyledTitle } from './styled'
 
 const LoginPage = () => {
-  const handleFormSubmit = (values: any) => {
-    console.log(values)
-  }
+  const { loading, handleFormSubmit } = useLoginPage()
 
   return (
     <StyledLoginPage>
       <OForm onFinish={handleFormSubmit}>
-        <OForm.Item name="name" rules={[{ required: true }]}>
-          <OInput placeholder="请输入用户名" />
-        </OForm.Item>
-        <OForm.Item name="password" rules={[{ required: true }]}>
-          <OInput.Password placeholder="请输入用密码" />
-        </OForm.Item>
-        <OForm.Item>
-          <OButton type="primary" htmlType="submit">
-            登录
-          </OButton>
-        </OForm.Item>
+        <OSpin spinning={loading}>
+          <StyledTitle>QMS系统</StyledTitle>
+          <OForm.Item name="name" rules={[{ required: true }]}>
+            <OInput placeholder="请输入用户名" />
+          </OForm.Item>
+          <OForm.Item name="password" rules={[{ required: true }]}>
+            <OInput.Password placeholder="请输入用密码" />
+          </OForm.Item>
+          <OForm.Item>
+            <OButton type="primary" htmlType="submit">
+              登录
+            </OButton>
+          </OForm.Item>
+        </OSpin>
       </OForm>
     </StyledLoginPage>
   )

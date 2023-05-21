@@ -7,8 +7,9 @@ import { OConfigProvider, OApp, IGlobalStyled } from '@ocloud/ui'
 
 import { createAppCache, createContainer } from '@ocloud/utils'
 
-import AppShell from '@/components/AppShell'
+import { antdTheme } from '@/config/antd'
 import { router } from '@/routes'
+import AppShell from '@/components/AppShell'
 
 const App = () => {
   const devModule: boolean = import.meta.env.REACT_DEV_MODULE
@@ -29,7 +30,7 @@ const App = () => {
           container={container}
           transformers={[legacyLogicalPropertiesTransformer]}>
           <IGlobalStyled />
-          <OConfigProvider prefixCls="qms" getPopupContainer={getPopupContainer}>
+          <OConfigProvider prefixCls="qms" theme={antdTheme} getPopupContainer={getPopupContainer}>
             <OApp>
               <BrowserRouter basename={qiankunWindow.__POWERED_BY_QIANKUN__ ? '/MES/QMS' : '/'}>
                 <Suspense>

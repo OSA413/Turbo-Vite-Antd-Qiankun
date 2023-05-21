@@ -7,11 +7,7 @@ import { StyledAppShell } from './styled'
 const AppShell: FC<PropsWithChildren> = ({ children }) => {
   useAppShell()
 
-  return (
-    <>
-      <StyledAppShell>{children}</StyledAppShell>
-    </>
-  )
+  return <StyledAppShell>{children}</StyledAppShell>
 }
 
 export default AppShell
