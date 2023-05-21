@@ -1,14 +1,14 @@
 import { FC, PropsWithChildren } from 'react'
-import { Link } from 'react-router-dom'
+
+import { useAppShell } from '@/hooks/AppShell'
 
 import { StyledAppShell } from './styled'
 
 const AppShell: FC<PropsWithChildren> = ({ children }) => {
+  useAppShell()
+
   return (
     <>
-      <Link to="/">Home</Link>
-      <br />
-      <Link to="/login">Login</Link>
       <StyledAppShell>{children}</StyledAppShell>
     </>
   )

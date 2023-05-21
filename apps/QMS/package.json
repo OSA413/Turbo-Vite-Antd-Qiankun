@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ocloud/hooks": "workspace:*",
     "@ocloud/tsconfig": "workspace:*",
     "@ocloud/utils": "workspace:*",
     "@vitejs/plugin-react-swc": "^3.0.0",

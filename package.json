@@ -37,6 +37,7 @@
     "vite-plugin-qiankun": "^1.0.15"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.7",
     "eslint-config-ocloud": "workspace:*",
     "prettier": "^2.7.1",
     "rollup-plugin-visualizer": "^5.9.0"
