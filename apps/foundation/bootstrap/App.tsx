@@ -1,11 +1,10 @@
-import { Suspense } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/cssinjs'
 import { ThemeProvider } from '@emotion/react'
 import { OConfigProvider, IGlobalStyled } from '@ocloud/ui'
 
 import AppShell from '@/components/AppShell'
-import { router } from '@/routes'
+import AppRoutes from '@/components/AppRoutes'
 
 const App = () => {
   return (
@@ -14,17 +13,11 @@ const App = () => {
         <OConfigProvider>
           <IGlobalStyled />
           <BrowserRouter>
-            <Suspense>
-              <AppShell>
-                <Routes>
-                  {router.map(({ path, component: Component }) => {
-                    return <Route key={path} path={path} element={<Component />} />
-                  })}
-                </Routes>
-              </AppShell>
-              <div id="oms__vmi" />
-              <div id="oms__qms" />
-            </Suspense>
+            <AppShell>
+              <AppRoutes />
+            </AppShell>
+            <div id="oms__vmi" />
+            <div id="oms__qms" />
           </BrowserRouter>
         </OConfigProvider>
       </ThemeProvider>

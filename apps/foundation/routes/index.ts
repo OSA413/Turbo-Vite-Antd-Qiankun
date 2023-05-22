@@ -1,24 +1,37 @@
-import { lazy } from 'react'
+import { LazyExoticComponent, lazy } from 'react'
 
-export const router = [
+interface Routes {
+  path: string
+  redirect?: string
+  component: LazyExoticComponent<any>
+  children: Routes[]
+}
+
+export const routes: Routes[] = [
   {
     path: '/',
-    component: lazy(() => import('@/pages/home')),
-    children: []
+    component: lazy(() => import('@/components/HomePage')),
+    children: [
+      {
+        path: '/',
+        component: lazy(() => import('@/pages/home')),
+        children: []
+      },
+      {
+        path: '/MES/VMI/*',
+        component: lazy(() => import('@/pages/mes/vmi')),
+        children: []
+      },
+      {
+        path: '/MES/QMS/*',
+        component: lazy(() => import('@/pages/mes/qms')),
+        children: []
+      }
+    ]
   },
   {
     path: '/login',
     component: lazy(() => import('@/pages/login')),
-    children: []
-  },
-  {
-    path: '/MES/VMI/*',
-    component: lazy(() => import('@/pages/mes/vmi')),
-    children: []
-  },
-  {
-    path: '/MES/QMS/*',
-    component: lazy(() => import('@/pages/mes/qms')),
     children: []
   },
   {

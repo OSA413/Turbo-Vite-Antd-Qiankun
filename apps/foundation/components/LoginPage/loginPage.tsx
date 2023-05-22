@@ -11,7 +11,7 @@ const LoginPage = () => {
     <StyledLoginPage>
       <OForm onFinish={handleFormSubmit}>
         <OSpin spinning={loading}>
-          <StyledTitle>QMS系统</StyledTitle>
+          <StyledTitle>Ocloud系统</StyledTitle>
           <OForm.Item name="name" rules={[{ required: true }]}>
             <OInput placeholder="请输入用户名" />
           </OForm.Item>

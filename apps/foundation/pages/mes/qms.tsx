@@ -21,7 +21,6 @@ const QMS = () => {
 
   return (
     <div>
-      <h1>Qiankun QMS Main App</h1>
       <div id="oms__qms" />
     </div>
   )

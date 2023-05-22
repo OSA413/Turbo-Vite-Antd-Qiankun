@@ -21,7 +21,6 @@ const VMI = () => {
 
   return (
     <div>
-      <h1>Qiankun Vmi Main App</h1>
       <div id="oms__vmi" />
     </div>
   )
