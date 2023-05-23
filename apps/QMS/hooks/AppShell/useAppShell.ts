@@ -8,6 +8,7 @@ export const useAppShell = () => {
   const { cookie } = useCookie()
   const { pathname } = useLocation()
 
+  const devModule: boolean = import.meta.env.REACT_DEV_MODULE
   const token: string = cookie.getItem('access_token')
 
   useEffect(() => {
@@ -16,5 +17,7 @@ export const useAppShell = () => {
     }
   }, [token, pathname])
 
-  return {}
+  return {
+    devModule
+  }
 }

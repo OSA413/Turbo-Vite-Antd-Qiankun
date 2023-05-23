@@ -24,6 +24,7 @@
     "@emotion/styled": "^11.10.5",
     "@ocloud/ui": "^0.1.11",
     "@reduxjs/toolkit": "^1.9.1",
+    "antd": "^5.5.0",
     "clsx": "^1.2.1",
     "lodash-es": "^4.17.21",
     "qiankun": "^2.10.8",

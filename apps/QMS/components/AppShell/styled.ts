@@ -1,8 +1,12 @@
 import styled from '@emotion/styled'
 
-export const StyledAppShell = styled.section`
+interface StyledAppShellProps {
+  devModule: boolean
+}
+
+export const StyledAppShell = styled.section<StyledAppShellProps>`
   position: fixed;
-  top: 50px;
+  top: ${(props) => (props.devModule ? '50px' : '0')};
   right: 0;
   bottom: 0;
   left: 0;

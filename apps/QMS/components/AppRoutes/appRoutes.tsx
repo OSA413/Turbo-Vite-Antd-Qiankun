@@ -10,11 +10,7 @@ const rotuerViews = (routerItems: any[]) => {
     <>
       {routerItems.map(({ path, component: Component, children, redirect }) => {
         const keepAliveKey: string = path
-        // const Element: any = (
-        //   <KeepAlive name={keepAliveKey} cacheKey={keepAliveKey} id={keepAliveKey}>
-        //     <Component />
-        //   </KeepAlive>
-        // )
+        const isCache: boolean = ['/', '/login'].includes(path)
 
         return children && children.length ? (
           <Route path={path} key={path} element={<Component />}>
@@ -26,9 +22,17 @@ const rotuerViews = (routerItems: any[]) => {
             key={path}
             path={path}
             element={
-              // <KeepAlive name={keepAliveKey} cacheKey={keepAliveKey} id={keepAliveKey}>
-              <Component />
-              // </KeepAlive>
+              isCache ? (
+                <Component />
+              ) : (
+                <KeepAlive
+                  name={keepAliveKey}
+                  cacheKey={keepAliveKey}
+                  id={keepAliveKey}
+                  autoFreeze={false}>
+                  <Component />
+                </KeepAlive>
+              )
             }
           />
         )

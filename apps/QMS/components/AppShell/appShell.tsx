@@ -5,9 +5,9 @@ import { useAppShell } from '@/hooks/AppShell'
 import { StyledAppShell } from './styled'
 
 const AppShell: FC<PropsWithChildren> = ({ children }) => {
-  useAppShell()
+  const { devModule } = useAppShell()
 
-  return <StyledAppShell>{children}</StyledAppShell>
+  return <StyledAppShell devModule={devModule}>{children}</StyledAppShell>
 }
 
 export default AppShell
