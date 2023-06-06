@@ -30,11 +30,6 @@ export const routes: Routes[] = [
     ]
   },
   {
-    path: '/login',
-    component: lazy(() => import('@/pages/login')),
-    children: []
-  },
-  {
     path: '*',
     component: lazy(() => import('@/pages/not-found')),
     children: []

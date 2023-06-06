@@ -3,7 +3,6 @@ import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/c
 import { ThemeProvider } from '@emotion/react'
 import { OConfigProvider, IGlobalStyled } from '@ocloud/ui'
 
-import AppShell from '@/components/AppShell'
 import AppRoutes from '@/components/AppRoutes'
 
 const App = () => {
@@ -13,9 +12,7 @@ const App = () => {
         <OConfigProvider>
           <IGlobalStyled />
           <BrowserRouter>
-            <AppShell>
-              <AppRoutes />
-            </AppShell>
+            <AppRoutes />
             <div id="oms__vmi" />
             <div id="oms__qms" />
           </BrowserRouter>
