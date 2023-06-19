@@ -7,8 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build:qiankun",
     "dev": "turbo run dev:qiankun",
+    "build": "turbo run build:qiankun",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "pnpm clean:node-modules & pnpm clean:next-cache & pnpm clean:turbo-cache",
@@ -17,7 +17,7 @@
     "clean:turbo-cache": "rm -rf ./node_modules/.cache"
   },
   "dependencies": {
-    "@ant-design/cssinjs": "^1.9.1",
+    "@ant-design/cssinjs": "^1.10.1",
     "@ant-design/icons": "^5.0.1",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.10.5",

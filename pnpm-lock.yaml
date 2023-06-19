@@ -5,8 +5,8 @@ importers:
   .:
     dependencies:
       '@ant-design/cssinjs':
-        specifier: ^1.9.1
-        version: 1.9.1(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^1.10.1
+        version: 1.10.1(react-dom@18.2.0)(react@18.2.0)
       '@ant-design/icons':
         specifier: ^5.0.1
         version: 5.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -25,6 +25,9 @@ importers:
       '@reduxjs/toolkit':
         specifier: ^1.9.1
         version: 1.9.1(react-redux@8.0.5)(react@18.2.0)
+      antd:
+        specifier: ^5.5.0
+        version: 5.5.0(react-dom@18.2.0)(react@18.2.0)
       clsx:
         specifier: ^1.2.1
         version: 1.2.1
@@ -226,7 +229,7 @@ importers:
         version: 8.3.0(eslint@7.32.0)
       eslint-config-turbo:
         specifier: latest
-        version: 1.9.8(eslint@7.32.0)
+        version: 1.10.3(eslint@7.32.0)
       eslint-plugin-react:
         specifier: 7.31.8
         version: 7.31.8(eslint@7.32.0)
@@ -264,8 +267,8 @@ packages:
       '@ctrl/tinycolor': 3.6.0
     dev: false
 
-  /@ant-design/cssinjs@1.9.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-CZt1vCMs/sY7RoacYuIkZwQmb8Bhp99ReNNE9Y8lnUzik8fmCdKAQA7ecvVOFwmNFdcBHga7ye/XIRrsbkiqWw==}
+  /@ant-design/cssinjs@1.10.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-PSoJS8RMzn95ZRg007dJGr6AU0Zim/O+tTN0xmXmh9CkIl4y3wuOr2Zhehaj7s130wPSYDVvahf3DKT50w/Zhw==}
     peerDependencies:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
@@ -1596,7 +1599,7 @@ packages:
       react-dom: '>=16.9.0'
     dependencies:
       '@ant-design/colors': 7.0.0
-      '@ant-design/cssinjs': 1.9.1(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/cssinjs': 1.10.1(react-dom@18.2.0)(react@18.2.0)
       '@ant-design/icons': 5.0.1(react-dom@18.2.0)(react@18.2.0)
       '@ant-design/react-slick': 1.0.1(react@18.2.0)
       '@babel/runtime': 7.21.5
@@ -2383,13 +2386,13 @@ packages:
       eslint: 7.32.0
     dev: false
 
-  /eslint-config-turbo@1.9.8(eslint@7.32.0):
-    resolution: {integrity: sha512-EaZ3EbWXo7bcnwRKZsV+ckcF5Cjdri9wRBXZd5j49E7mJ3EEPvGw70h77kWeeunu+jM3mxxfy8olmo1Udr7gvQ==}
+  /eslint-config-turbo@1.10.3(eslint@7.32.0):
+    resolution: {integrity: sha512-ggzPfTJfMsMS383oZ4zfTP1zQvyMyiigOQJRUnLt1nqII6SKkTzdKZdwmXRDHU24KFwUfEFtT6c8vnm2VhL0uQ==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 7.32.0
-      eslint-plugin-turbo: 1.9.8(eslint@7.32.0)
+      eslint-plugin-turbo: 1.10.3(eslint@7.32.0)
     dev: false
 
   /eslint-import-resolver-node@0.3.7:
@@ -2540,8 +2543,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /eslint-plugin-turbo@1.9.8(eslint@7.32.0):
-    resolution: {integrity: sha512-Alvv3zCkILFfwEJ2aiuUjzYFqZ12qX+2F14ahNOhC9BDwgGZkEh1w19TB2gOPMLeNx2+iBVAU9L+1FTBSOOAJA==}
+  /eslint-plugin-turbo@1.10.3(eslint@7.32.0):
+    resolution: {integrity: sha512-g3Mnnk7el1FqxHfqbE/MayLvCsYjA/vKmAnUj66kV4AlM7p/EZqdt42NMcMSKtDVEm0w+utQkkzWG2Xsa0Pd/g==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
