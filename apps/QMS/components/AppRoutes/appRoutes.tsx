@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { AliveScope, KeepAlive } from 'react-activation'
+import { AliveScope, KeepAlive, useAliveController } from 'react-activation'
 
 import ErrorBoundary from '@/components/ErrorBoundary'
 import { routes } from '@/routes'
@@ -42,6 +42,9 @@ const rotuerViews = (routerItems: any[]) => {
 }
 
 const AppRoutes = () => {
+  const aliveController = useAliveController()
+  window.aliveController = aliveController
+
   return (
     <AliveScope>
       <Suspense>

@@ -20,9 +20,9 @@ const Header = () => {
     <StyledHeader>
       <StyledNavigation>
         <StyledLogo>
-          <Link to="/">
+          {/* <Link to="/">
             <img src="/images/logo.png" width={96} height={25} alt="" />
-          </Link>
+          </Link> */}
         </StyledLogo>
         <StyledMenus>
           <li>

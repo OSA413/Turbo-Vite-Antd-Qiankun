@@ -13,7 +13,7 @@ const initQianKun = () => {
   renderWithQiankun({
     // 文档 https://qiankun.umijs.org/zh/guide/getting-started#
     mount(props: any) {
-      console.log(props)
+      console.log('QMS子应用开始挂载......')
       const { container, namespace } = props
       renderApp(container, namespace)
       // 监听主应用传值
@@ -23,7 +23,11 @@ const initQianKun = () => {
     },
     bootstrap() {},
     update() {},
-    unmount() {}
+    unmount() {
+      console.log('QMS子应用已经卸载......')
+      window.aliveController.clear()
+      console.log(window.aliveController.getCachingNodes())
+    }
   })
 }
 

@@ -4,6 +4,7 @@ import { StyleProvider, legacyLogicalPropertiesTransformer, createCache } from '
 import { CacheProvider, ThemeProvider } from '@emotion/react'
 import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 import { OConfigProvider, OApp, IGlobalStyled } from '@ocloud/ui'
+import { AliveScope } from 'react-activation'
 
 import { createAppCache, createContainer } from '@ocloud/utils'
 
